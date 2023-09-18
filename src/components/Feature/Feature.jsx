@@ -5,7 +5,7 @@ const Feature = ({feature}) => {
     return (
         <div className='text-black text-left px-2'>
             <p className='flex items-center gap-3'>
-                <AiFillCheckCircle className='text-green-500'></AiFillCheckCircle>{feature}</p>
+                <AiFillCheckCircle className='text-green-500 text-xl'></AiFillCheckCircle>{feature}</p>
         </div>
     );
 };
