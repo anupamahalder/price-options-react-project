@@ -3,7 +3,7 @@ const Link = ({route}) => {
     //destructuring route data
 
     return (
-        <li className="mr-4"><a href={route.path}>{route.name}</a></li>
+        <li className="mr-14 hover:bg-yellow-500"><a href={route.path}>{route.name}</a></li>
     );
 };
 
