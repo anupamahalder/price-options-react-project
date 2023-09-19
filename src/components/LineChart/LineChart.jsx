@@ -1,4 +1,5 @@
 import { LineChart as LChart, Line } from 'recharts';
+import { XAxis, YAxis } from 'recharts';
 
 const LineChart = () => {
     const studentData = [
@@ -17,9 +18,14 @@ const LineChart = () => {
     return (
         <div>
             {/* width and height are in pixel units  data will be taken from studentData*/}
-            <LChart width={500} height={400} data={studentData}>
+            <LChart width={900} height={400} data={studentData}>
+            {/* Here X -axis will show the name of student  */}
+            <XAxis dataKey="name" />
+            <YAxis></YAxis>
                 {/* Create minimum a single line  */}
                 <Line type={'monotone'} dataKey={"mathScore"}></Line>
+                {/* Create another line for physics marks to add color we use stroke*/}
+                <Line type={'linear'} dataKey={"physicsScore"} stroke='red'></Line>
             </LChart>
         </div>
     );
