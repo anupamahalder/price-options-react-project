@@ -1,4 +1,4 @@
-import { LineChart as LChart, Line } from 'recharts';
+import { LineChart as LChart, Line, PieChart, Pie } from 'recharts';
 import { XAxis, YAxis } from 'recharts';
 
 const LineChart = () => {
@@ -27,6 +27,13 @@ const LineChart = () => {
                 {/* Create another line for physics marks to add color we use stroke*/}
                 <Line type={'linear'} dataKey={"physicsScore"} stroke='red'></Line>
             </LChart>
+
+            {/* Using pieChart  */}
+            <PieChart width={730} height={250}>
+            <Pie data={studentData} dataKey={'mathScore'} nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="green" />
+            <Pie data={studentData} dataKey={'mathScore'} nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="gold" label />
+            </PieChart>
+
         </div>
     );
 };
